@@ -8,7 +8,7 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <CounterApp counter={0} />
+        <CounterApp value={ 10 } />
     </React.StrictMode>
 )
 

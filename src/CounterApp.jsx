@@ -3,15 +3,15 @@ import { useState } from 'react'
 
 
 
-    const handleSuma = () => {
-        // console.log(event)
-    }
+    
 
 export const CounterApp = ( { value } ) => {
 
-    const [ counter ] = useState( 10 );
+    const [ counter, setCounter ] = useState( value );
     
-
+    const handleSuma = () => {
+       setCounter(counter + 1);
+    }
   return (
     <> 
         <h1>Counter app</h1>
@@ -24,9 +24,9 @@ export const CounterApp = ( { value } ) => {
 };
 
 CounterApp.propTypes = {
-    counter: PropTypes.number.isRequired
+    value: PropTypes.number.isRequired
 };
 
 CounterApp.defaultProps = {
-    counter: 10
+    value: 10
 }
