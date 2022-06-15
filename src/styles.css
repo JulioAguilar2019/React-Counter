@@ -6,3 +6,10 @@ html, body {
     padding: 70px;
 }
 
+button {
+    padding: 15px 30px;
+    background-color: oldlace;
+    border-radius: 10px;
+    font-size: 1.3rem;
+
+}
