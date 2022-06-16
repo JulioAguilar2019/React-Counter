@@ -3,24 +3,38 @@ import { useState } from 'react'
 
 
 
-    
 
-export const CounterApp = ( { value } ) => {
 
-    const [ counter, setCounter ] = useState( value );
-    
+export const CounterApp = ({ value }) => {
+
+
+    console.log('render');
+
+    const [counter, setCounter] = useState(value);
+
     const handleSuma = () => {
-       setCounter(counter + 1);
+        setCounter(counter + 1);
     }
-  return (
-    <> 
-        <h1>Counter app</h1>
-        <h2> { counter } </h2>
-        <button onClick={ handleSuma }>
-            Sumar 1 al counter
-        </button>
-    </>
-  )
+    
+
+    const handleResta = () => {
+        setCounter(counter - 1);
+    }
+
+    const handleReset = () => {
+        setCounter(value);
+    }
+
+    return (
+        <>
+            <h1>Counter app</h1>
+            <h2> {counter} </h2>
+            <button onClick={ handleSuma }>Sumar 1 al counter</button>
+            <button onClick={ handleResta }>Restar 1 al counter</button>
+            <button onClick={ handleReset }>Resetear el counter</button>
+            
+        </>
+    )
 };
 
 CounterApp.propTypes = {
@@ -30,3 +44,4 @@ CounterApp.propTypes = {
 CounterApp.defaultProps = {
     value: 10
 }
+
