@@ -21,3 +21,12 @@ module.exports = {
 and also
 
 npm i -D @types/jest
+
+for test and need to install
+
+npm i -D @babel/preset-react   
+npm i -D jest-environment-jsdom
+npm i isomorphic-fetch
+npm i -D @testing-library/react
+
+if i need another, search on package.json to remember.
